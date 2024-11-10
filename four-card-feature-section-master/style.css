@@ -1,0 +1,133 @@
+:root {
+  --color-red: hsl(0, 78%, 62%);
+  --color-cyan: hsl(180, 62%, 55%);
+  --color-orange: hsl(34, 97%, 64%);
+  --color-blue: hsl(212, 86%, 64%);
+
+  --color-very-dark-blue: hsl(234, 12%, 34%);
+  --color-grayish-blue: hsl(229, 6%, 66%);
+  --color-very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9375rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  color: var(--color-very-dark-blue);
+  background-color: var(--color-very-light-gray);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 20rem;
+  align-items: center;
+  padding: 3rem 0rem;
+  gap: 1rem;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.summary {
+  font-weight: 400;
+  color: var(--color-grayish-blue);
+  text-align: center;
+}
+
+.card-stack {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.role-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 2px 4px 0.4rem hsl(0, 1%, 85%), -2px 4px 0.4rem hsl(0, 1%, 85%);
+}
+
+.supervisor {
+  border-top: 4px solid var(--color-cyan);
+}
+
+.teambuilder {
+  border-top: 4px solid var(--color-red);
+}
+
+.karma {
+  border-top: 4px solid var(--color-orange);
+}
+
+.calculator {
+  border-top: 4px solid var(--color-blue);
+}
+
+.role-definition {
+  font-size: 0.875rem;
+}
+
+.role-pictorial-representation {
+  align-self: end;
+  max-width: 3rem;
+}
+
+@media (min-width: 1048px) {
+  .main-container {
+    max-width: 32rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .card-stack {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .supervisor {
+    grid-column: 1; /* Redundant but mentioned for clarity at a glance */
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+
+  .teambuilder {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .karma {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .calculator {
+    grid-column: 3; /* Redundant but mentioned for clarity at a glance */
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+
+  .role-card {
+    min-width: 20rem;
+    gap: 1rem;
+  }
+
+  .role-pictorial-representation {
+    margin-top: 2rem;
+    max-width: 5rem;
+  }
+}

@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--cream);
+  font-family: Monteserrat, sans-serif;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chanel-product-card {
+  max-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden; /* Ensures child elements like the product-image respect the border radius */
+  background-color: var(--white);
+}
+
+.product-image {
+  max-width: 100%;
+  display: block;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
+}
+
+.product-type {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--dark-grayish-blue);
+}
+
+.product-title {
+  margin-top: 1rem;
+  color: var(--very-dark-blue);
+  font-family: Fraunces, sans-serif;
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+.product-description {
+  color: var(--dark-grayish-blue);
+  margin-top: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+.product-price {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  color: var(--dark-cyan);
+  font-family: Fraunces, sans-serif;
+  font-size: 2rem;
+}
+
+.product-price .original-price {
+  color: var(--dark-grayish-blue);
+  font-size: 0.8rem;
+  font-family: Montserrat, sans-serif;
+  margin-left: 1.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.add-to-cart-btn {
+  background-color: var(--dark-cyan);
+  border-color: transparent;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover,
+.add-to-cart-btn:focus {
+  background-color: hsl(158, 39%, 27%);
+}
+
+.btn-label {
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  body {
+    min-height: 100vh;
+  }
+
+  .chanel-product-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 40rem;
+    align-items: center;
+  }
+}
