@@ -76,7 +76,6 @@ nav {
 
 .purple-btn {
   background-color: var(--purple-600);
-  margin-top: 1rem;
 }
 
 .purple-btn:hover,
@@ -183,4 +182,51 @@ nav {
 
 .footer-btn span {
   color: var(--purple-300);
+}
+
+@media (min-width: 768px) {
+  .hero-img {
+    height: calc(0.4 * 100vw);
+  }
+
+  .hero-info {
+    max-width: 28rem;
+    margin: auto;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .image-galore {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin: 4rem 2rem;
+  }
+
+  .kicker {
+    font-size: 0.875rem;
+  }
+
+  .main-info {
+    max-width: 31.5rem;
+    margin: auto;
+  }
+
+  .main-title {
+    font-size: 2.25rem;
+    padding: 0 1.5rem;
+  }
+
+  .footer-bg-image {
+    background-image: url(assets/tablet/image-footer.jpg);
+    width: 100vw;
+  }
+
+  .footer-content {
+    max-width: 31.5rem;
+    margin: auto;
+  }
 }
