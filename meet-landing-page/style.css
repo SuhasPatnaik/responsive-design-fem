@@ -1,0 +1,186 @@
+:root {
+  --cyan-600: #4d96a9;
+  --cyan-300: #8fe3f9;
+  --purple-600: #855fb1;
+  --purple-300: #d9b8ff;
+  --slate-900: #28283d;
+  --slate-600: #87879d;
+  --slate-300: #d1d1df;
+  --white: #fafafa;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Red Hat Display", serif;
+}
+
+nav {
+  padding-top: 4rem;
+}
+
+.hero-img {
+  margin: 4rem 0rem;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height: calc(0.42 * 100vw);
+  gap: 1.5rem;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0rem 2rem;
+  gap: 1.5rem;
+  padding: 0rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: 900;
+  color: var(--slate-900);
+}
+
+.section-summary {
+  color: var(--slate-600);
+}
+
+.button {
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+  border: 0px;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.cyan-btn {
+  background-color: var(--cyan-600);
+}
+
+.cyan-btn:hover,
+.cyan-btn:active {
+  background-color: #71c0d4;
+  cursor: pointer;
+}
+
+.cyan-btn span {
+  color: var(--cyan-300);
+}
+
+.purple-btn {
+  background-color: var(--purple-600);
+  margin-top: 1rem;
+}
+
+.purple-btn:hover,
+.purple-btn:active {
+  background-color: #b18bdd;
+  cursor: pointer;
+}
+
+.number-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line {
+  width: 1px;
+  height: 5rem;
+  background-color: var(--slate-300);
+}
+
+.circle {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--slate-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  z-index: 1;
+}
+
+.number {
+  color: var(--slate-600);
+  font-weight: 900;
+}
+
+.image-galore {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 4rem 2rem;
+}
+
+.image-galore img {
+  border-radius: 0.5rem;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0rem 2rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.kicker {
+  font-size: 0.75rem;
+  letter-spacing: 0.25rem;
+  line-height: 1.1;
+  font-weight: 900;
+  color: var(--cyan-600);
+  text-transform: uppercase;
+}
+
+.main-title {
+  font-size: 2rem;
+}
+
+.footer-bg-image {
+  background-image: url(./assets/mobile/image-footer.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -1.75rem;
+}
+
+.footer-bg-color {
+  background-color: var(--cyan-600);
+  opacity: 0.8;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.footer-title {
+  color: var(--white);
+}
+
+.footer-summary {
+  color: var(--white);
+}
+
+.footer-btn span {
+  color: var(--purple-300);
+}
