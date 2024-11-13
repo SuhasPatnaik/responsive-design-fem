@@ -14,6 +14,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: "Red Hat Display", serif;
+  overflow-x: hidden;
 }
 
 nav {
@@ -76,6 +77,7 @@ nav {
 
 .purple-btn {
   background-color: var(--purple-600);
+  margin-top: 1rem;
 }
 
 .purple-btn:hover,
@@ -199,6 +201,10 @@ nav {
     gap: 1rem;
   }
 
+  .purple-btn {
+    margin-top: 0rem;
+  }
+
   .image-galore {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -227,6 +233,69 @@ nav {
 
   .footer-content {
     max-width: 31.5rem;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1048px) {
+  .hero {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    width: 100vw;
+    height: 50vh;
+    max-height: 60vh;
+  }
+
+  .hero-img {
+    display: contents;
+  }
+
+  .left-img {
+    grid-column: 1;
+    height: 80%;
+  }
+
+  .hero-info {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+    max-width: 32rem; /* Set a max width for better readability */
+  }
+
+  .right-img {
+    grid-column: 3;
+    justify-self: end;
+    align-self: flex-end;
+    height: 80%;
+  }
+
+  .number-container {
+    margin-top: 3.5rem;
+  }
+
+  .image-galore {
+    margin: 4rem 5rem;
+  }
+
+  footer {
+    scroll-behavior: none;
+  }
+
+  .footer-bg-image {
+    background-image: url(assets/desktop/image-footer.jpg);
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 80vw;
+    text-align: left;
+  }
+
+  .footer-btn {
+    width: fit-content;
     margin: auto;
   }
 }
